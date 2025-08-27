@@ -15,7 +15,11 @@ const userSchema = new mongoose.Schema(
         password: {
             type: String,
             required: true
-        }
+        },
+        avatar: {
+            type: String,
+            default: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/marvel-studios-cinematic-universe/e/e1/Widow2-avengers.jpg"
+        },
     },
     {
         timestamps: true
