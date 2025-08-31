@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import userRouter from "../api/routes/user.route.js"
 import authRouter from "../api/routes/auth.route.js"
+import cookieParser from "cookie-parser"
 
 dotenv.config()
 
@@ -19,6 +20,9 @@ const app = express()
 
 // Enable json could be received
 app.use(express.json())
+
+// Could get information from cookie
+app.use(cookieParser())
 
 app.listen(3000, () => {
     console.log("App is running on port 3000!!!")
